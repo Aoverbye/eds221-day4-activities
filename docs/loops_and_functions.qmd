@@ -1,0 +1,50 @@
+---
+title: "loops_and_functions.qmd"
+author: "Amanda Overbye"
+format: html
+editor: visual
+editor_options: 
+  chunk_output_type: console
+---
+```{r}
+library(tidyverse)
+```
+
+```{r}
+weekdays <- c("monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sundays")
+transects <- c("transect a", "transect b", "transcet c")
+
+weekday_matrix <- matrix(nrow = length(weekdays), ncol = length(transects))
+
+
+for (i in seq_along(weekdays)){
+  for (j in seq_along(transects))
+  weekday_matrix [i, j] <- print(paste0(weekdays [i], "-", transects [j]))
+}
+
+```
+
+```{r}
+force <- function(mass, accelation) {
+  newtons <- (mass * accelation)
+  print(paste("force is", (newtons), "newtons"))
+}
+force(5, 9)
+
+```
+
+ 
+```{r}
+sci_names <- c("Chanos chanos", "Sphyraena barracuda", "Caranx ignobilis")
+common_name <- c("Milkfish", "Great barracuda", "Giant trevally")
+a_est <- c(0.0905, 0.0181, 0.0353)
+b_est <- c(2.52, 3.27, 3.05)
+
+fish_matrix <- matrix(nrow = length(sci_names), ncol = length(common_name))
+
+for (i in seq_along(sci_names)) {
+  for (j in seq_along(common_name))
+    fish_matrix [i, j] print
+}
+```
+
